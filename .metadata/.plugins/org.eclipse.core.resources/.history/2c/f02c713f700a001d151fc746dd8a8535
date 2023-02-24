@@ -1,0 +1,40 @@
+package com.klef.jfsd;
+
+import org.hibernate.*;
+import org.hibernate.cfg.*;
+
+public class ProductCRUDOperations 
+{
+   public static void main(String args[])
+   {
+	   ProductCRUDOperations crudOperations = new ProductCRUDOperations();
+	   crudOperations.insertProduct();
+   }
+   public void insertProduct()
+   {
+	   Configuration configuration = new Configuration();
+	   configuration.configure("hibernate.cfg.xml");
+	   
+	   SessionFactory sessionFactory = configuration.buildSessionFactory();
+	   Session session = sessionFactory.openSession(); //transient state
+	   
+	   Transaction transaction = session.beginTransaction();
+	   
+	   Product product = new Product();
+	   product.setId(101);
+	   product.setCategory("Gadgets");
+	   product.setName("FIT BIT WATCH");
+	   product.setDescription("It is a smart watch");
+	   product.setPrice(13000.50);
+	   product.setManufactureddate("10/01/2020");
+	   product.setExpiry(false);
+	   
+	   session.save(product);  //persistent state
+	   
+	   transaction.commit(); // which will save the results into database
+	   System.out.println("Product Objects saved successfully");
+	   session.close(); //detach state
+	   sessionFactory.close();
+	   
+   }
+}

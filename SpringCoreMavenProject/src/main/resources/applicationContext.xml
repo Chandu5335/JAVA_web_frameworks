@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- bean definitions here -->
+
+<bean id="studentbean" class="SetterDI.Student">
+
+<property name="id" value="101"></property>
+<property name="name" value="CHANDU"/>
+<property name="gender" value="MALE"></property>
+<property name="age" value="20"></property>
+<property name="CGPA" value="8.58"></property>
+<property name="backlogs" value="0"></property>
+<property name="Graduate" value="false"></property>
+<property name="skills">
+<list>
+<value>C</value>
+<value>CPP</value>
+<value>AWS</value>
+<value>Python</value>
+<value>JAVA EE</value>
+</list>
+</property>
+
+</bean>
+
+<bean id="empbean" class="ConstructorDI.Employee">
+
+<constructor-arg name="id" value="102" ></constructor-arg>
+<constructor-arg name="name" value="RAJAAN"></constructor-arg>
+<constructor-arg name="gender" value="MALE"></constructor-arg>
+<constructor-arg name="salary" value="135000.00"></constructor-arg>
+<constructor-arg name="married" value="false"></constructor-arg>
+<constructor-arg name="skills">
+<list>
+<value>Marketing</value>
+<value>Finance</value>
+<value>Sales</value>
+</list>
+</constructor-arg>
+
+
+</bean>
+
+<bean id="facultybean" class="AutowiringDemo.Faculty">
+<property name="id" value="102"></property>
+<property name="name" value = "Rajaan"></property>
+<property name="gender" value="MALE"></property>
+<property name="salary" value="125000"></property>
+<property name="address" ref="addressbean"></property>
+</bean>
+
+<bean id ="addressbean" class="AutowiringDemo.Address">
+
+<property name="landmark" value="4-67"></property>
+<property name="city" value = "MAHABUBABAD"></property>
+<property name="state" value="TELANGANA"></property>
+<property name="country" value="INDIA"></property>
+
+</bean>
+
+
+</beans>

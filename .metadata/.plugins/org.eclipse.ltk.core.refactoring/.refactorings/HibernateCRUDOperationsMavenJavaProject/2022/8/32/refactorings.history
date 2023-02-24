@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;HQLDemo.java&apos; to &apos;MenuHibernateCURDOperationsMavenJavaProject/src/main/java/com.klef.jfsd&apos;&#x0D;&#x0A;- Original project: &apos;HibernateCRUDOperationsMavenJavaProject&apos;&#x0D;&#x0A;- Destination element: &apos;MenuHibernateCURDOperationsMavenJavaProject/src/main/java/com.klef.jfsd&apos;&#x0D;&#x0A;- Original element: &apos;com.klef.jfsd.HQLDemo.java&apos;" description="Copy compilation unit" destination="=MenuHibernateCURDOperationsMavenJavaProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.klef.jfsd" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.klef.jfsd{HQLDemo.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1659622007438" units="1" version="1.0"/>
+</session>
